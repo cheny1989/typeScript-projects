@@ -1,0 +1,39 @@
+<html>
+
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+
+
+</style>
+</head>
+
+<body>
+
+<script>
+//תכנות לא פרוצדוראלי -  not oop//
+function deposit (balance, amount, type){
+    if (type == "vip"){
+        amount +=50;
+    }
+    let newBalance = balance + amount;
+    return newBalance
+}
+
+function withdrew(balance, amount, type){
+    if (balance <= -100000){
+        return false;
+    }
+    let newBalance = balance - amount;
+    if (type == "normal" && newBalance < 10000){
+        newBalance -= 100;
+    }
+    return newBalance - amount
+}
+
+</script>
+</body>
+</html>
+
+
